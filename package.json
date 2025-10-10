@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:prod": "ng build --configuration production",
+    "vercel-build": "ng build --configuration production",
     "deploy": "ng build --configuration production && npx angular-cli-ghpages --dir=dist/portfolio/browser"
   },
   "prettier": {

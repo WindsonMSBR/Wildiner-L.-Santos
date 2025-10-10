@@ -1,59 +1,75 @@
-# Portfolio
+# Portfolio Wildiner
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
+Portfolio pessoal desenvolvido em Angular, hospedado no Vercel.
 
-## Development server
+## 🚀 Deploy no Vercel
 
-To start a local development server, run:
+Este projeto está configurado para deploy automático no Vercel através do GitHub.
 
-```bash
-ng serve
+### Configurações Incluídas
+
+- ✅ `vercel.json` - Configuração do Vercel
+- ✅ Script `vercel-build` no package.json
+- ✅ Build de produção otimizado
+- ✅ Roteamento SPA configurado
+- ✅ Guia completo de deploy em `DEPLOY_VERCEL.md`
+
+### Tecnologias
+
+- **Frontend**: Angular 20.3.0
+- **Styling**: SCSS
+- **Deploy**: Vercel
+- **Versionamento**: Git + GitHub
+
+### Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── components/          # Componentes da aplicação
+│   │   ├── about/          # Seção sobre
+│   │   ├── education/     # Educação
+│   │   ├── experience/    # Experiência profissional
+│   │   ├── skills/        # Habilidades
+│   │   └── ...
+│   ├── core/
+│   │   ├── models/        # Modelos de dados
+│   │   └── services/      # Serviços
+│   └── ...
+├── assets/                 # Recursos estáticos
+└── styles.scss            # Estilos globais
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Comandos Disponíveis
 
 ```bash
-ng generate component component-name
+# Desenvolvimento
+npm start
+
+# Build de produção
+npm run build
+
+# Build para Vercel
+npm run vercel-build
+
+# Testes
+npm test
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Deploy
 
-```bash
-ng generate --help
-```
+Para fazer o deploy:
 
-## Building
+1. Siga o guia em `DEPLOY_VERCEL.md`
+2. Conecte o repositório ao Vercel
+3. Configure o domínio personalizado (opcional)
 
-To build the project run:
+### Links Úteis
 
-```bash
-ng build
-```
+- [Guia de Deploy](./DEPLOY_VERCEL.md)
+- [Documentação Angular](https://angular.dev)
+- [Documentação Vercel](https://vercel.com/docs)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Desenvolvido por**: Wildiner Lucio dos Santos
