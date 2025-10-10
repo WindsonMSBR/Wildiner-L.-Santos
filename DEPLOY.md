@@ -32,11 +32,11 @@ npm run deploy
 ## URLs de Acesso
 
 Após o deploy, seu site estará disponível em:
-- `https://[seu-username].github.io/portfolio/`
+- `https://windsonmsbr.github.io/`
 
 ## Configurações Importantes
 
-- **baseHref**: Configurado como `/portfolio/` no `angular.json`
+- **baseHref**: Removido para domínio personalizado (WindsonMSBR.github.io)
 - **Build**: Otimizado para produção com minificação e tree-shaking
 - **Assets**: Todos os arquivos estáticos são copiados corretamente
 
