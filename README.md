@@ -73,3 +73,9 @@ Para fazer o deploy:
 ---
 
 **Desenvolvido por**: Wildiner Lucio dos Santos
+
+## 🌐 Deploy Status
+
+- **Vercel**: [wildiner-l-santos.vercel.app](https://wildiner-l-santos.vercel.app)
+- **GitHub**: [Wildiner-L.-Santos](https://github.com/WindsonMSBR/Wildiner-L.-Santos)
+- **Última atualização**: $(date)
