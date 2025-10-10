@@ -14,5 +14,10 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs22.x"
+    }
+  }
 }
