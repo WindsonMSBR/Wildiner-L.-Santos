@@ -1,0 +1,175 @@
+@import '../../../variables';
+
+.experience-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid $secondary-color;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-height: 200px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .company-logo {
+      transform: scale(1.1);
+    }
+  }
+
+  .card-image {
+    flex-shrink: 0;
+    text-align: center;
+
+    .company-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+      background: #f8f9fa;
+      padding: 1rem;
+    }
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .company {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $primary-color;
+        margin: 0;
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .period {
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+
+    .role {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $text-color;
+      margin: 0 0 0.8rem 0;
+    }
+
+    .project {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      color: $primary-color;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .location {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: $secondary-color;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: $text-color;
+      margin: 0;
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    min-height: auto;
+    gap: 1.5rem;
+
+    .card-image {
+      .company-logo {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .card-content {
+      .card-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .company {
+          font-size: 1.4rem;
+          text-align: center;
+        }
+
+        .period {
+          align-self: center;
+        }
+      }
+
+      .role {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .project {
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      .location {
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}

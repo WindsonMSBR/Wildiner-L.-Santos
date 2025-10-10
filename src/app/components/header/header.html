@@ -1,0 +1,48 @@
+<header class="header">
+  <div class="container">
+    <div class="profile-section">
+      <div class="profile-image">
+        <img *ngIf="!imageError" 
+             [src]="personalInfo?.profileImage" 
+             [alt]="personalInfo?.name" 
+             class="profile-photo"
+             (error)="onImageError($event)"
+             (load)="onImageLoad($event)">
+        <div *ngIf="imageError" class="profile-photo placeholder">
+          <span class="placeholder-text">{{ personalInfo?.name?.charAt(0) }}</span>
+        </div>
+      </div>
+      <div class="profile-info">
+        <h1 class="name">{{ personalInfo?.name }}</h1>
+        <div class="title-container">
+          <div class="title-left">
+            <div class="title-line">SUPERVISOR DE SOLDA</div>
+            <div class="title-line">INSPETOR DE SOLDA N1</div>
+          </div>
+          <div class="title-separator"></div>
+          <div class="title-right">
+            <div class="title-specialty">Especialista em Projetos Onshore & Offshore</div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="icon">📧</i>
+            <span>{{ personalInfo?.email }}</span>
+          </div>
+          <div class="contact-item">
+            <i class="icon">📱</i>
+            <span>{{ personalInfo?.phone }}</span>
+          </div>
+          <div class="contact-item">
+            <i class="icon">📍</i>
+            <span>{{ personalInfo?.location }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="downloads/CV_Wildiner_Lucio_dos_Santos.pdf" target="_blank" class="download-btn" download="CV_Wildiner_Lucio_dos_Santos.pdf">
+      <i class="fas fa-download"></i>
+      Baixar Currículo
+    </a>
+  </div>
+</header>

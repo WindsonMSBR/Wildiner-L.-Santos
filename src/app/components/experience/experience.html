@@ -1,0 +1,11 @@
+<section class="experience">
+  <div class="container">
+    <h2 class="section-title">Experiência Profissional</h2>
+    <div class="experience-grid">
+      <app-experience-card 
+        *ngFor="let exp of experiences; trackBy: trackByCompany" 
+        [experience]="exp">
+      </app-experience-card>
+    </div>
+  </div>
+</section>

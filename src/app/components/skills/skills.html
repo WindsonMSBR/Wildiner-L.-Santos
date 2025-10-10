@@ -1,0 +1,33 @@
+<section class="skills">
+  <div class="container">
+    <div class="skills-content">
+      <div class="certifications-section">
+        <h2 class="section-title">
+          <i class="icon">🏆</i>
+          Certificações e Qualificações
+        </h2>
+        <div class="skill-category">
+          <div class="skill-list">
+            <div *ngFor="let cert of certifications" class="skill-item certification">
+              <span class="skill-name">{{ cert.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="technical-section">
+        <h2 class="section-title">
+          <i class="icon">⚙️</i>
+          Habilidades Técnicas
+        </h2>
+        <div class="skill-category">
+          <div class="skill-list">
+            <div *ngFor="let skill of technicalSkills" class="skill-item technical">
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
