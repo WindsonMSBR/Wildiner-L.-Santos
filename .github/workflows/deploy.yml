@@ -20,16 +20,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.20'
+          node-version: '20.19'   # Angular CLI requires >=20.19
           cache: 'npm'
           
+      - name: Verify Node.js version
+        run: node --version
+        
       - name: Install dependencies
         run: npm ci
         
-      - name: Build
+      - name: Build (production)
         run: npm run build:prod
         
       - name: Setup Pages
